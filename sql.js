@@ -15,7 +15,7 @@ var parse = () => {
         .map(i => / ?(?<param>.+)\((?<type>\w+)\)/s.exec(i).groups)
     sql.value = preparing.replace(/\?/g, () => {
         let {param, type} = parameters.shift()
-        if(type == 'String') {
+        if(type == 'String' || type == 'Timestamp') {
             return `'${param}'`
         }
         return param
