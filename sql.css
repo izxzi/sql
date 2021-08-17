@@ -1,0 +1,102 @@
+body {
+    margin: 0px;
+    max-height: 100vh;
+}
+
+h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .12), 1px 1px 2px rgba(0, 0, 0, .5);
+    user-select: none;
+    cursor: pointer;
+    text-align: initial;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 83%;
+    transform: rotate(-3deg);
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    50%{transform: rotate(-2.7deg);}
+}
+
+textarea {
+    height: 240px;
+    width: 75%;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .12), 1px 1px 3px rgba(0, 0, 0, .5);
+    padding: 5px;
+}
+
+button {
+    color: #fbfbfd;
+    margin: 12px 24px;
+    border: none;
+    width: 78px;
+    height: 28px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .12), 1px 1px 2px rgba(0, 0, 0, .5);
+    background-color: black;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: rgb(72, 72, 72);
+}
+
+button:active {
+    background-color: black;
+}
+
+.context {
+    margin: 0px auto;
+    width: 90%;
+    text-align: center;
+}
+
+#poetry {
+    position: fixed;
+    top: 72px;
+    right: 24px;
+    writing-mode: vertical-rl;    
+    user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#time {
+    margin: auto;
+    color: #fbfbfd;
+    font-weight: 700;
+    font-size: 24px;
+    width: 120px;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .12), 1px 1px 2px rgba(0, 0, 0, .5);
+    background-color: black;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9aa0a6;
+    background-clip: padding-box;
+    border: 1.5px solid transparent;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: 0 0;
+}
