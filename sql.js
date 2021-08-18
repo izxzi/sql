@@ -34,6 +34,7 @@ var beautify = (sql) => {
         .replace(/=/ig, ' = ')
         .replace(/and/ig, '\n   and')
         .replace(/set/ig, '\n   set')
+        .replace(/union all/ig, '\n union all')
         .replace(/order by/ig, '\n order by')
 }
 
