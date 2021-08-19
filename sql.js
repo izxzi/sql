@@ -52,11 +52,25 @@ var lowercase = () => {
     sql.value = sql.value.toLocaleLowerCase()
 }
 
+var sleep = async (ms) => {
+    return await new Promise((resolve, reject) => {
+        setTimeout(resolve, ms)
+    })
+}
+
 var initPoet = async () => {
     let poetry = document.getElementById('poetry')
     let res = await fetch('https://v1.jinrishici.com/all.txt')
     let text = await res.text()
     poetry.innerText = text
+    setInterval(async () => {
+        poetry.style.color = 'white'
+        await sleep(3000)
+        let res = await fetch('https://v1.jinrishici.com/all.txt')
+        let text = await res.text()
+        poetry.innerText = text
+        poetry.style.color = 'black'
+    }, 60000)
 }
 
 var initTime = () => {

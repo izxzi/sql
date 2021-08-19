@@ -67,6 +67,7 @@ button:active {
     cursor: pointer;
     font-weight: 600;
     font-size: 20px;
+    transition: color 1.5s linear 0s;
 }
 
 #time {
